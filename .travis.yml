@@ -1,6 +1,9 @@
 language: java
 
-before_script: sudo apt-get install -y build-essential omniidl libomniorb4-dev libcos4-dev libomnithread3-dev libzmq3-dev libmysqlclient-dev
+before_script:
+  - sudo apt install -y build-essential omniidl libomniorb4-dev libcos4-dev libomnithread3-dev libzmq3-dev libmysqlclient-dev
+  - sudo apt install -y python python-pip
+  - pip install --user Sphinx~=1.0 ipython~=5.0
 script:
   - ant build package
 
